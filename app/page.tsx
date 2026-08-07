@@ -101,6 +101,7 @@ function CTAButton({
 
 export default function HomePage() {
   const [active, setActive] = useState<Category>("Todos");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const filteredProjects = useMemo(() => {
     if (active === "Todos") return projects;
@@ -109,6 +110,7 @@ export default function HomePage() {
 
   return (
     <main
+      id="top"
       className={`${chosenFont.className} text-white`}
       style={{
         backgroundColor: "#06060a",
@@ -122,26 +124,78 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative min-h-[86vh]">
         {/* NAVBAR */}
-        <header className="sticky top-0 z-30 w-full border-b border-white/10 bg-[#06060a]/55 backdrop-blur-md">
-          <div className="flex w-full items-center justify-between gap-4 px-4 py-3 md:px-8">
-            <div className="shrink-0 text-xl font-extrabold tracking-wide text-white">
+        <header className="sticky top-0 z-40 w-full border-b border-white/10 bg-[#06060a]/70 backdrop-blur-md">
+          <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 md:px-8">
+            {/* Logo -> inicio */}
+            <a
+              href="#top"
+              className="shrink-0 text-xl font-extrabold tracking-wide text-white"
+              aria-label="Ir al inicio"
+              onClick={() => setMenuOpen(false)}
+            >
               MGL
-            </div>
+            </a>
 
-            <nav className="flex-1 overflow-x-auto">
-              <div className="flex min-w-max items-center justify-end gap-2 md:gap-3">
-                <NavPill href="#servicios">Servicios</NavPill>
-                <NavPill href="#portfolio">Portfolio</NavPill>
-                <NavPill href="#proceso">Proceso</NavPill>
+            {/* Desktop */}
+            <nav className="hidden items-center gap-3 md:flex">
+              <NavPill href="#servicios">Servicios</NavPill>
+              <NavPill href="#portfolio">Portfolio</NavPill>
+              <NavPill href="#proceso">Proceso</NavPill>
+              <a
+                href="#contacto"
+                className="whitespace-nowrap rounded-full border border-fuchsia-400/40 bg-fuchsia-500/25 px-4 py-2 text-sm font-semibold text-white transition hover:bg-fuchsia-500/35"
+              >
+                Contacto
+              </a>
+            </nav>
+
+            {/* Botón mobile */}
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-lg border border-white/20 px-3 py-2 text-sm text-white/90 md:hidden"
+              aria-label="Abrir menú"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((v) => !v)}
+            >
+              Menú
+            </button>
+          </div>
+
+          {/* Panel mobile */}
+          {menuOpen && (
+            <div className="border-t border-white/10 bg-[#0b0a12] md:hidden">
+              <nav className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-4 py-2">
                 <a
+                  className="rounded-lg px-3 py-2 text-sm hover:bg-white/10"
+                  href="#servicios"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Servicios
+                </a>
+                <a
+                  className="rounded-lg px-3 py-2 text-sm hover:bg-white/10"
+                  href="#portfolio"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Portfolio
+                </a>
+                <a
+                  className="rounded-lg px-3 py-2 text-sm hover:bg-white/10"
+                  href="#proceso"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Proceso
+                </a>
+                <a
+                  className="mb-1 rounded-lg bg-fuchsia-500/25 px-3 py-2 text-sm font-semibold hover:bg-fuchsia-500/35"
                   href="#contacto"
-                  className="whitespace-nowrap rounded-full border border-fuchsia-400/40 bg-fuchsia-500/25 px-4 py-2 text-sm font-semibold text-white transition hover:bg-fuchsia-500/35"
+                  onClick={() => setMenuOpen(false)}
                 >
                   Contacto
                 </a>
-              </div>
-            </nav>
-          </div>
+              </nav>
+            </div>
+          )}
         </header>
 
         {/* HERO CONTENT */}
