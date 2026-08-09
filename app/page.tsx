@@ -283,8 +283,8 @@ export default function HomePage() {
           </h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 items-center">
-          {/* Left: About text */}
+        <div className="mx-auto max-w-3xl">
+          {/* About text */}
           <div className="space-y-5">
             <p className="text-white/80 text-lg leading-relaxed">
               Somos un equipo especializado en crear soluciones web de alto impacto para startups y PyMEs que buscan crecer en el mundo digital.
@@ -326,29 +326,6 @@ export default function HomePage() {
                   <p className="text-white/70 text-sm">Diseño que convierte, estrategia que vende.</p>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Right: Stats / Highlight */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/10 p-6 text-center">
-              <div className="text-4xl font-bold text-fuchsia-400">4+</div>
-              <p className="mt-2 text-white/80">Proyectos Exitosos</p>
-            </div>
-
-            <div className="rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/10 p-6 text-center">
-              <div className="text-4xl font-bold text-fuchsia-400">48hs</div>
-              <p className="mt-2 text-white/80">Entrega Rápida</p>
-            </div>
-
-            <div className="rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/10 p-6 text-center">
-              <div className="text-4xl font-bold text-fuchsia-400">100%</div>
-              <p className="mt-2 text-white/80">Personalizado</p>
-            </div>
-
-            <div className="rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/10 p-6 text-center">
-              <div className="text-4xl font-bold text-fuchsia-400">∞</div>
-              <p className="mt-2 text-white/80">Escalabilidad</p>
             </div>
           </div>
         </div>
