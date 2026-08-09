@@ -99,6 +99,28 @@ function CTAButton({
   );
 }
 
+// WhatsApp Flotante
+function FloatingWhatsApp() {
+  return (
+    <a
+      href="https://wa.me/5491166601557"
+      target="_blank"
+      rel="noreferrer"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg shadow-green-500/50 hover:bg-green-400 transition hover:scale-110"
+      aria-label="Contactar por WhatsApp"
+      title="¿Preguntas? ¡Hablemos!"
+    >
+      <svg
+        className="w-6 h-6 text-white"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.946 1.275c-1.51.923-2.727 2.236-3.556 3.764-.885 1.635-1.337 3.433-1.289 5.267.048 1.834.589 3.578 1.611 5.043.873 1.225 1.984 2.3 3.265 3.075 1.281.775 2.706 1.264 4.2 1.451 1.495.187 3.032.048 4.487-.41 1.455-.458 2.801-1.238 3.945-2.292 1.144-1.053 2.04-2.351 2.621-3.809.581-1.458.854-3.026.809-4.608-.045-1.582-.357-3.104-1.0-4.485-.643-1.381-1.601-2.62-2.808-3.55-.963-.728-2.058-1.246-3.198-1.53a9.87 9.87 0 00-3.341-.138z" />
+      </svg>
+    </a>
+  );
+}
+
 export default function HomePage() {
   const [active, setActive] = useState<Category>("Todos");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -121,6 +143,9 @@ export default function HomePage() {
         backgroundPosition: "top center",
       }}
     >
+      {/* FLOATING WHATSAPP */}
+      <FloatingWhatsApp />
+
       {/* HERO */}
       <section className="relative min-h-[86vh]">
         {/* NAVBAR */}
@@ -138,6 +163,7 @@ export default function HomePage() {
 
             {/* Desktop */}
             <nav className="hidden items-center gap-3 md:flex">
+              <NavPill href="#somos">Quiénes Somos</NavPill>
               <NavPill href="#servicios">Servicios</NavPill>
               <NavPill href="#portfolio">Portfolio</NavPill>
               <NavPill href="#proceso">Proceso</NavPill>
@@ -165,6 +191,13 @@ export default function HomePage() {
           {menuOpen && (
             <div className="border-t border-white/10 bg-[#0b0a12] md:hidden">
               <nav className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-4 py-2">
+                <a
+                  className="rounded-lg px-3 py-2 text-sm hover:bg-white/10"
+                  href="#somos"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Quiénes Somos
+                </a>
                 <a
                   className="rounded-lg px-3 py-2 text-sm hover:bg-white/10"
                   href="#servicios"
@@ -223,8 +256,7 @@ export default function HomePage() {
               .
             </h1>
             <p className="mt-4 max-w-2xl text-base text-white/80 md:text-lg">
-              Creamos landing pages, webs corporativas y e-commerce con
-              estrategia, diseño y rendimiento para escalar tu negocio.
+              Landing pages, sitios corporativos y e-commerce con estrategia personalizada, diseño moderno y rendimiento excepcional.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -232,6 +264,91 @@ export default function HomePage() {
               <CTAButton href="#portfolio" ghost>
                 Ver portfolio
               </CTAButton>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* QUIÉNES SOMOS */}
+      <section
+        id="somos"
+        className="mx-auto w-full max-w-6xl px-6 py-16 md:px-8 md:py-20"
+      >
+        <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
+          <p className="mb-2 text-xs uppercase tracking-[0.22em] text-fuchsia-300">
+            Quiénes Somos
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
+            Expertos en transformación digital
+          </h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 items-center">
+          {/* Left: About text */}
+          <div className="space-y-5">
+            <p className="text-white/80 text-lg leading-relaxed">
+              Somos un equipo especializado en crear soluciones web de alto impacto para startups y PyMEs que buscan crecer en el mundo digital.
+            </p>
+            
+            <p className="text-white/80 text-lg leading-relaxed">
+              Con más de <span className="text-fuchsia-300 font-semibold">4 proyectos exitosos</span>, combinamos diseño moderno, desarrollo robusto y estrategia comercial para transformar tu visión en realidad.
+            </p>
+
+            <div className="space-y-3 pt-4">
+              <div className="flex items-start gap-3">
+                <span className="text-fuchsia-400 font-bold text-xl mt-1">✓</span>
+                <div>
+                  <h4 className="font-semibold text-white">Asesoramiento Exclusivo</h4>
+                  <p className="text-white/70 text-sm">Soluciones orientadas a las necesidades específicas de tu empresa o negocio.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="text-fuchsia-400 font-bold text-xl mt-1">✓</span>
+                <div>
+                  <h4 className="font-semibold text-white">Calidad + Velocidad</h4>
+                  <p className="text-white/70 text-sm">Entregamos tu web en 48hs sin comprometer profesionalismo.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="text-fuchsia-400 font-bold text-xl mt-1">✓</span>
+                <div>
+                  <h4 className="font-semibold text-white">Tecnología de Punta</h4>
+                  <p className="text-white/70 text-sm">Next.js, React y Node.js para webs rápidas, seguras y escalables.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="text-fuchsia-400 font-bold text-xl mt-1">✓</span>
+                <div>
+                  <h4 className="font-semibold text-white">Enfoque en Resultados</h4>
+                  <p className="text-white/70 text-sm">Diseño que convierte, estrategia que vende.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Stats / Highlight */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/10 p-6 text-center">
+              <div className="text-4xl font-bold text-fuchsia-400">4+</div>
+              <p className="mt-2 text-white/80">Proyectos Exitosos</p>
+            </div>
+
+            <div className="rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/10 p-6 text-center">
+              <div className="text-4xl font-bold text-fuchsia-400">48hs</div>
+              <p className="mt-2 text-white/80">Entrega Rápida</p>
+            </div>
+
+            <div className="rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/10 p-6 text-center">
+              <div className="text-4xl font-bold text-fuchsia-400">100%</div>
+              <p className="mt-2 text-white/80">Personalizado</p>
+            </div>
+
+            <div className="rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/10 p-6 text-center">
+              <div className="text-4xl font-bold text-fuchsia-400">∞</div>
+              <p className="mt-2 text-white/80">Escalabilidad</p>
             </div>
           </div>
         </div>
@@ -248,7 +365,7 @@ export default function HomePage() {
           </div>
 
           <h2 className="text-3xl font-extrabold leading-tight text-[#F2ECFF] md:text-5xl">
-            Webs reales, de negocios reales.
+            Webs que transforman negocios.
           </h2>
 
           <div className="mt-7 flex flex-wrap gap-2.5">
@@ -322,11 +439,10 @@ export default function HomePage() {
             Servicios
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Soluciones pensadas para crecer
+            Soluciones personalizadas
           </h2>
           <p className="mt-3 text-white/70">
-            Servicios de punta a punta para que tu presencia digital sea clara,
-            rápida y rentable.
+            Cada proyecto es único. Adaptamos tecnología y diseño a tus objetivos específicos.
           </p>
         </div>
 
@@ -334,15 +450,15 @@ export default function HomePage() {
           {[
             {
               title: "Landing Pages",
-              desc: "Páginas enfocadas 100% en conversión y captación de leads.",
+              desc: "Páginas enfocadas en conversión y captación de leads con estrategia comercial clara.",
             },
             {
               title: "Sitios Corporativos",
-              desc: "Webs sólidas y profesionales para transmitir confianza de marca.",
+              desc: "Presencia profesional que transmite confianza, seriedad y modernidad de marca.",
             },
             {
               title: "E-commerce",
-              desc: "Tiendas online con UX clara, velocidad y foco en ventas.",
+              desc: "Tiendas online optimizadas para ventas con UX intuitiva y rendimiento excepcional.",
             },
           ].map((item) => (
             <article
@@ -367,23 +483,26 @@ export default function HomePage() {
             Proceso
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Simple, claro y efectivo
+            Metodología probada y eficiente
           </h2>
+          <p className="mt-3 text-white/70">
+            Transformamos tu idea en realidad en 3 pasos claros y medibles.
+          </p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3 md:gap-5">
           {[
             [
               "1. Descubrimiento",
-              "Analizamos objetivos, propuesta de valor y público ideal.",
+              "Analizamos tu negocio, objetivos, público ideal y propuesta de valor única.",
             ],
             [
               "2. Diseño & Desarrollo",
-              "Diseñamos la experiencia y construimos la web.",
+              "Creamos experiencia visual impactante y arquitectura técnica robusta.",
             ],
             [
-              "3. Lanzamiento",
-              "Publicamos, medimos y optimizamos para mejorar resultados.",
+              "3. Lanzamiento & Optimización",
+              "Publicamos, medimos resultados y optimizamos para mejorar continuamente.",
             ],
           ].map(([title, desc]) => (
             <article
@@ -405,15 +524,17 @@ export default function HomePage() {
               Contacto
             </p>
             <h2 className="mt-2 text-3xl font-bold md:text-4xl">
-              ¿List@ para tu nueva web?
+              ¿List@ para transformar tu negocio?
             </h2>
             <p className="mt-3 text-white/75">
-              Te ayudo a crear una web que represente tu marca y genere
-              oportunidades reales.
+              Hablemos de tu proyecto. Te ayudamos a crear una web que venda, que escale y que enamora a tu público.
             </p>
-            <div className="mt-6 flex justify-center">
+            <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
               <CTAButton href="https://wa.me/5491166601557">
                 Escribime por WhatsApp
+              </CTAButton>
+              <CTAButton href="mailto:melisa.gis@gmail.com" ghost>
+                O envía un email
               </CTAButton>
             </div>
           </div>
