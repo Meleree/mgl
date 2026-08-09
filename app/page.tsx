@@ -110,13 +110,13 @@ function FloatingWhatsApp() {
       aria-label="Contactar por WhatsApp"
       title="¿Preguntas? ¡Hablemos!"
     >
-      <svg
-        className="w-6 h-6 text-white"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.946 1.275c-1.51.923-2.727 2.236-3.556 3.764-.885 1.635-1.337 3.433-1.289 5.267.048 1.834.589 3.578 1.611 5.043.873 1.225 1.984 2.3 3.265 3.075 1.281.775 2.706 1.264 4.2 1.451 1.495.187 3.032.048 4.487-.41 1.455-.458 2.801-1.238 3.945-2.292 1.144-1.053 2.04-2.351 2.621-3.809.581-1.458.854-3.026.809-4.608-.045-1.582-.357-3.104-1.0-4.485-.643-1.381-1.601-2.62-2.808-3.55-.963-.728-2.058-1.246-3.198-1.53a9.87 9.87 0 00-3.341-.138z" />
-      </svg>
+      <Image
+        src="/whatsapp.png"
+        alt="WhatsApp"
+        width={24}
+        height={24}
+        className="w-6 h-6"
+      />
     </a>
   );
 }
@@ -291,7 +291,7 @@ export default function HomePage() {
             </p>
             
             <p className="text-white/80 text-lg leading-relaxed">
-              Con más de <span className="text-fuchsia-300 font-semibold">4 proyectos exitosos</span>, combinamos diseño moderno, desarrollo robusto y estrategia comercial para transformar tu visión en realidad.
+              Combinamos <span className="text-fuchsia-300 font-semibold">diseño moderno, desarrollo robusto y estrategia comercial</span> para transformar tu visión en realidad.
             </p>
 
             <div className="space-y-3 pt-4">
