@@ -507,7 +507,7 @@ export default function HomePage() {
               Hablemos de tu proyecto. Te ayudamos a crear una web que venda, que escale y que enamora a tu público.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-              <CTAButton href="https://wa.me/5491166601557">
+              <CTAButton href="https://wa.me/5491176671054">
                 Escribime por WhatsApp
               </CTAButton>
               <CTAButton href="mailto:melisa.gis@gmail.com" ghost>
