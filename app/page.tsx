@@ -103,7 +103,7 @@ function CTAButton({
 function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/5491166601557"
+      href="https://wa.me/5491176671054"
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg shadow-green-500/50 hover:bg-green-400 transition hover:scale-110"
@@ -510,7 +510,7 @@ export default function HomePage() {
               <CTAButton href="https://wa.me/5491176671054">
                 Escribime por WhatsApp
               </CTAButton>
-              <CTAButton href="mailto:melisa.gis@gmail.com" ghost>
+              <CTAButton href="mailto:mgl.design.web@gmail.com" ghost>
                 O envía un email
               </CTAButton>
             </div>
