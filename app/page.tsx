@@ -56,6 +56,12 @@ const projects: Project[] = [
     image: "/portfolio/mini-al.png",
     href: "https://alindumentaria.com.ar/",
   },
+  {
+    title: "Lofgren Press Kit",
+    category: "Servicios Profesionales",
+    image: "/portfolio/mini-lofgren.png",
+    href: "https://lofgren.vercel.app/",
+  },
 ];
 
 function NavPill({
