@@ -62,6 +62,12 @@ const projects: Project[] = [
     image: "/portfolio/mini-lofgren.png",
     href: "https://lofgren.vercel.app/",
   },
+  {
+    title: "DEL´ØRT Press Kit",
+    category: "Servicios Profesionales",
+    image: "/portfolio/mini-delort.png",
+    href: "https://delort.vercel.app/",
+  },
 ];
 
 function NavPill({
@@ -262,7 +268,8 @@ export default function HomePage() {
               .
             </h1>
             <p className="mt-4 max-w-2xl text-base text-white/80 md:text-lg">
-              Landing pages, sitios corporativos y e-commerce con estrategia personalizada, diseño moderno y rendimiento excepcional.
+              Landing pages, sitios corporativos y e-commerce con estrategia
+              personalizada, diseño moderno y rendimiento excepcional.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -293,19 +300,30 @@ export default function HomePage() {
           {/* About text */}
           <div className="space-y-5">
             <p className="text-white/80 text-lg leading-relaxed">
-              Somos un equipo especializado en crear soluciones web de alto impacto para startups y PyMEs que buscan crecer en el mundo digital.
+              Somos un equipo especializado en crear soluciones web de alto
+              impacto para startups y PyMEs que buscan crecer en el mundo
+              digital.
             </p>
-            
+
             <p className="text-white/80 text-lg leading-relaxed">
-              Combinamos <span className="text-fuchsia-300 font-semibold">diseño moderno, desarrollo robusto y estrategia comercial</span> para transformar tu visión en realidad.
+              Combinamos{" "}
+              <span className="text-fuchsia-300 font-semibold">
+                diseño moderno, desarrollo robusto y estrategia comercial
+              </span>{" "}
+              para transformar tu visión en realidad.
             </p>
 
             <div className="space-y-3 pt-4">
               <div className="flex items-start gap-3">
                 <span className="text-fuchsia-400 font-bold text-xl mt-1">✓</span>
                 <div>
-                  <h4 className="font-semibold text-white">Asesoramiento Exclusivo</h4>
-                  <p className="text-white/70 text-sm">Soluciones orientadas a las necesidades específicas de tu empresa o negocio.</p>
+                  <h4 className="font-semibold text-white">
+                    Asesoramiento Exclusivo
+                  </h4>
+                  <p className="text-white/70 text-sm">
+                    Soluciones orientadas a las necesidades específicas de tu
+                    empresa o negocio.
+                  </p>
                 </div>
               </div>
 
@@ -313,7 +331,9 @@ export default function HomePage() {
                 <span className="text-fuchsia-400 font-bold text-xl mt-1">✓</span>
                 <div>
                   <h4 className="font-semibold text-white">Calidad + Velocidad</h4>
-                  <p className="text-white/70 text-sm">Entregamos tu web en 48hs sin comprometer profesionalismo.</p>
+                  <p className="text-white/70 text-sm">
+                    Entregamos tu web en 48hs sin comprometer profesionalismo.
+                  </p>
                 </div>
               </div>
 
@@ -321,15 +341,22 @@ export default function HomePage() {
                 <span className="text-fuchsia-400 font-bold text-xl mt-1">✓</span>
                 <div>
                   <h4 className="font-semibold text-white">Tecnología de Punta</h4>
-                  <p className="text-white/70 text-sm">Next.js, React y Node.js para webs rápidas, seguras y escalables.</p>
+                  <p className="text-white/70 text-sm">
+                    Next.js, React y Node.js para webs rápidas, seguras y
+                    escalables.
+                  </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <span className="text-fuchsia-400 font-bold text-xl mt-1">✓</span>
                 <div>
-                  <h4 className="font-semibold text-white">Enfoque en Resultados</h4>
-                  <p className="text-white/70 text-sm">Diseño que convierte, estrategia que vende.</p>
+                  <h4 className="font-semibold text-white">
+                    Enfoque en Resultados
+                  </h4>
+                  <p className="text-white/70 text-sm">
+                    Diseño que convierte, estrategia que vende.
+                  </p>
                 </div>
               </div>
             </div>
@@ -425,7 +452,8 @@ export default function HomePage() {
             Soluciones personalizadas
           </h2>
           <p className="mt-3 text-white/70">
-            Cada proyecto es único. Adaptamos tecnología y diseño a tus objetivos específicos.
+            Cada proyecto es único. Adaptamos tecnología y diseño a tus objetivos
+            específicos.
           </p>
         </div>
 
@@ -510,7 +538,8 @@ export default function HomePage() {
               ¿List@ para transformar tu negocio?
             </h2>
             <p className="mt-3 text-white/75">
-              Hablemos de tu proyecto. Te ayudamos a crear una web que venda, que escale y que enamora a tu público.
+              Hablemos de tu proyecto. Te ayudamos a crear una web que venda, que
+              escale y que enamora a tu público.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
               <CTAButton href="https://wa.me/5491176671054">
