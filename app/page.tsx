@@ -65,7 +65,7 @@ const projects: Project[] = [
   {
     title: "Obregon Press Kit",
     category: "Servicios Profesionales",
-    image: "/portfolio/mini-delort.png",
+    image: "/portfolio/mini-obregon.png",
     href: "https://obregon.vercel.app/",
   },
   {
