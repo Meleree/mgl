@@ -49,7 +49,7 @@ const projects: Project[] = [
     category: "Servicios Profesionales",
     image: "/portfolio/mini-asenzo.png",
     href: "https://asenzoreta.com.ar/",
-  },
+  },  
   {
     title: "AL indumentaria",
     category: "Moda & Indumentaria",
@@ -63,10 +63,16 @@ const projects: Project[] = [
     href: "https://lofgren.vercel.app/",
   },
   {
-    title: "DEL´ØRT Press Kit",
+    title: "Obregon Press Kit",
     category: "Servicios Profesionales",
     image: "/portfolio/mini-delort.png",
-    href: "https://delort.vercel.app/",
+    href: "https://obregon.vercel.app/",
+  },
+  {
+    title: "Candela Horacek",
+    category: "Servicios Profesionales",
+    image: "/portfolio/mini-cande.png",
+    href: "https://candelahor.vercel.app/",
   },
 ];
 
